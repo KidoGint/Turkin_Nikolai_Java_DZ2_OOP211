@@ -1,18 +1,14 @@
 package animals;
 
 import food.Food;
+import food.Grass;
 
 public class Duck extends Herbivore implements Voice, Fly, Swim, Run {
-    private int fullness;
-
-    public int getFullness() {
-        return this.fullness;
-    }
-
     @Override
     public void eat(Food food) {
         System.out.print("A Duck");
         super.eat(food);
+        if (food instanceof Grass) this.fullness += food.getSatiety();
     }
 
     @Override

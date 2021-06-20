@@ -1,18 +1,13 @@
 package animals;
 
 import food.Food;
-import food.Grass;
+import food.Meat;
 
 public abstract class Herbivore extends Animal {
-    private int fullness;
-
-    public abstract int getFullness();
-
     @Override
     public void eat(Food food) {
-        if (food instanceof Grass) System.out.println(" doesn't eat Meal");
+        if (food instanceof Meat) System.out.println(" doesn't eat Meat");
         else {
-            this.fullness += food.getSatiety();
             System.out.println(" is eating Grass");
         }
     }

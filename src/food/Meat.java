@@ -1,6 +1,7 @@
 package food;
 
-public abstract class Grass extends Food {
+public abstract class Meat extends Food {
+
 
     @Override
     public int getSatiety() {

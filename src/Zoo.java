@@ -1,6 +1,7 @@
 import animals.*;
-import food.Grass;
-import food.Meal;
+import food.Banana;
+import food.Meat;
+import food.Steak;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -13,32 +14,33 @@ public class Zoo {
         for (int i = 0; i < 10; i++) {
             pool[i] = (i < 5) ? new Fish() : new Duck();
         }
-        Meal meal = new Meal("meat", 40);
-        Grass grass = new Grass("grass", 10);
-        worker.feed(camal, meal);
-        worker.feed(camal, grass);
+        Steak steak = new Steak( 40);
+        Banana banana = new Banana(10);
+        worker.feed(camal, steak);
+        worker.feed(camal, banana);
         worker.getVoice(camal);
 
-        worker.feed(lion, meal);
-        worker.feed(lion, grass);
+        worker.feed(lion, steak);
+        worker.feed(lion, banana);
         worker.getVoice(lion);
 
-        worker.feed(zebra, meal);
-        worker.feed(zebra, grass);
+        worker.feed(zebra, steak);
+        worker.feed(zebra, banana);
         worker.getVoice(zebra);
 
-        worker.feed(wolf, meal);
-        worker.feed(wolf, grass);
+        worker.feed(wolf, steak);
+        worker.feed(wolf, banana);
         worker.getVoice(wolf);
 
         for (int i = 5; i < 10; i++) {
             worker.getVoice((Voice) pool[i]);
         }
         for (int i = 0; i < 10; i++) {
-            worker.feed((Animal) pool[i], meal);
-            worker.feed((Animal) pool[i], grass);
+            worker.feed((Animal) pool[i], steak);
+            worker.feed((Animal) pool[i], banana);
             pool[i].swim();
 
         }
+        System.out.println(camal.getFullness());
     }
 }

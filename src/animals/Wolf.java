@@ -4,15 +4,10 @@ import food.Food;
 
 public class Wolf extends Carnivorous implements Voice, Run, Swim {
     private final String name;
-    private final int fullness;
 
     public Wolf(String name, int fullness) {
-        this.fullness = fullness;
+        super.fullness = fullness;
         this.name = name;
-    }
-
-    public String getName() {
-        return this.name;
     }
 
     @Override

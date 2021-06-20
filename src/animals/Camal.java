@@ -1,13 +1,12 @@
 package animals;
 
-import food.Food;
+import food.*;
 
 public class Camal extends Herbivore implements Voice, Run {
-    private final String name;
-    private final int fullness;
+    private String name;
 
     public Camal(String name, int fullness) {
-        this.fullness = fullness;
+        super.fullness = fullness;
         this.name = name;
     }
 
@@ -15,11 +14,7 @@ public class Camal extends Herbivore implements Voice, Run {
     public void eat(Food food) {
         System.out.print("A Camal");
         super.eat(food);
-    }
-
-    @Override
-    public int getFullness() {
-        return this.fullness;
+        if (food instanceof Grass) this.fullness+=food.getSatiety();
     }
 
     @Override

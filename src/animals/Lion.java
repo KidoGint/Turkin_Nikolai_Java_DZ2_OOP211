@@ -1,24 +1,21 @@
 package animals;
 
 import food.Food;
+import food.Meat;
 
 public class Lion extends Carnivorous implements Voice, Run {
-    private final String name;
-    private final int fullness;
+    private String name;
 
     public Lion(String name, int fullness) {
         this.fullness = fullness;
         this.name = name;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
     @Override
     public void eat(Food food) {
         System.out.print("A Lion");
         super.eat(food);
+        if (food instanceof Meat) this.fullness += food.getSatiety();
     }
 
     @Override
@@ -29,10 +26,5 @@ public class Lion extends Carnivorous implements Voice, Run {
     @Override
     public String voice() {
         return "woof";
-    }
-
-    @Override
-    public int getFullness() {
-        return this.fullness;
     }
 }

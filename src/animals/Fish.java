@@ -1,18 +1,14 @@
 package animals;
 
 import food.Food;
+import food.Meat;
 
 public class Fish extends Carnivorous implements Swim {
-    private int fullness;
-
-    public int getFullness() {
-        return this.fullness;
-    }
-
     @Override
     public void eat(Food food) {
         System.out.print("A Fish");
         super.eat(food);
+        if (food instanceof Meat) this.fullness += food.getSatiety();
     }
 
     @Override
