@@ -41,6 +41,5 @@ public class Zoo {
             pool[i].swim();
 
         }
-        System.out.println(camal.getFullness());
     }
 }

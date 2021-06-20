@@ -8,7 +8,7 @@ public class Fish extends Carnivorous implements Swim {
     public void eat(Food food) {
         System.out.print("A Fish");
         super.eat(food);
-        if (food instanceof Meat) this.fullness += food.getSatiety();
+        if (food instanceof Meat) super.fullness += food.getSatiety();
     }
 
     @Override

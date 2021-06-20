@@ -6,7 +6,7 @@ public class Zebra extends Herbivore implements Voice, Run {
     private final String name;
 
     public Zebra(String name, int fullness) {
-        this.fullness = fullness;
+        super.fullness = fullness;
         this.name = name;
     }
 

@@ -14,7 +14,7 @@ public class Camal extends Herbivore implements Voice, Run {
     public void eat(Food food) {
         System.out.print("A Camal");
         super.eat(food);
-        if (food instanceof Grass) this.fullness+=food.getSatiety();
+        if (food instanceof Grass) super.fullness+=food.getSatiety();
     }
 
     @Override

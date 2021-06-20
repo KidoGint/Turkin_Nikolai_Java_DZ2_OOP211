@@ -8,7 +8,7 @@ public class Duck extends Herbivore implements Voice, Fly, Swim, Run {
     public void eat(Food food) {
         System.out.print("A Duck");
         super.eat(food);
-        if (food instanceof Grass) this.fullness += food.getSatiety();
+        if (food instanceof Grass) super.fullness += food.getSatiety();
     }
 
     @Override

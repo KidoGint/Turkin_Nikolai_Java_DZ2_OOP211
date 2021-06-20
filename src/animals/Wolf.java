@@ -30,9 +30,4 @@ public class Wolf extends Carnivorous implements Voice, Run, Swim {
     public String voice() {
         return "woof";
     }
-
-    @Override
-    public int getFullness() {
-        return this.fullness;
-    }
 }
