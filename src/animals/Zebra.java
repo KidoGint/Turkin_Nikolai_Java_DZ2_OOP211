@@ -1,28 +1,15 @@
 package animals;
 
-import food.Food;
-
 public class Zebra extends Herbivore implements Voice, Run {
-    private final String name;
 
     public Zebra(String name, int fullness) {
         super.fullness = fullness;
-        this.name = name;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public void eat(Food food) {
-        System.out.print("Zebra");
-        super.eat(food);
+        super.name = name;
     }
 
     @Override
     public void run() {
-        System.out.println(this.name + "is running");
+        System.out.println(super.name + "is running");
     }
 
     @Override

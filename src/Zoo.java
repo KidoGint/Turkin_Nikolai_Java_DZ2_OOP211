@@ -1,6 +1,5 @@
 import animals.*;
 import food.Banana;
-import food.Meat;
 import food.Steak;
 
 public class Zoo {
@@ -12,9 +11,9 @@ public class Zoo {
         Wolf wolf = new Wolf("Woo", 70);
         Swim[] pool = new Swim[10];
         for (int i = 0; i < 10; i++) {
-            pool[i] = (i < 5) ? new Fish() : new Duck();
+            pool[i] = (i < 5) ? new Fish("Fishy №"+i,10) : new Duck("Ducky №"+(i-5),15);
         }
-        Steak steak = new Steak( 40);
+        Steak steak = new Steak(40);
         Banana banana = new Banana(10);
         worker.feed(camal, steak);
         worker.feed(camal, banana);

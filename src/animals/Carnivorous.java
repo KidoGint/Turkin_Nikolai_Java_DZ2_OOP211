@@ -7,9 +7,10 @@ public abstract class Carnivorous extends Animal {
 
     @Override
     public void eat(Food food) {
-        if (food instanceof Grass) System.out.println(" doesn't eat Grass");
+        if (food instanceof Grass) System.out.println(super.getName() + " doesn't eat Grass");
         else {
-            System.out.println(" is eating Meat");
+            super.fullness += food.getSatiety();
+            System.out.println(super.getName() + " is eating Meat");
         }
     }
 
