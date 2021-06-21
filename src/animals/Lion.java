@@ -1,4 +1,5 @@
 package animals;
+
 import constants.Sizes;
 
 public class Lion extends Carnivorous implements Voice, Run {

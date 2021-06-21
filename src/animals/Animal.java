@@ -19,7 +19,7 @@ public abstract class Animal {
         return this.size;
     }
 
-    public abstract void eat(Food food)  throws WrongFoodException;
+    public abstract void eat(Food food) throws WrongFoodException;
 
     public int getFullness() {
         return this.fullness;

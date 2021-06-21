@@ -1,5 +1,7 @@
 package animals;
+
 import constants.Sizes;
+
 public class Wolf extends Carnivorous implements Voice, Run, Swim {
 
     public Wolf(String name, int fullness, Sizes size) {

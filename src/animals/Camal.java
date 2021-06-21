@@ -1,5 +1,7 @@
 package animals;
+
 import constants.Sizes;
+
 public class Camal extends Herbivore implements Voice, Run {
 
     public Camal(String name, int fullness, Sizes size) {

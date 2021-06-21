@@ -1,5 +1,7 @@
 package animals;
+
 import constants.Sizes;
+
 public class Duck extends Herbivore implements Voice, Fly, Swim, Run {
 
     public Duck(String name, int fullness, Sizes size) {

@@ -1,5 +1,7 @@
 package animals;
+
 import constants.Sizes;
+
 public class Zebra extends Herbivore implements Voice, Run {
 
     public Zebra(String name, int fullness, Sizes size) {
