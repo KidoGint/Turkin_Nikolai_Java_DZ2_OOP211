@@ -1,10 +1,11 @@
 package animals;
-
+import constants.Sizes;
 public class Duck extends Herbivore implements Voice, Fly, Swim, Run {
 
-    public Duck(String name, int fullness) {
+    public Duck(String name, int fullness, Sizes size) {
         super.fullness = fullness;
         super.name = name;
+        super.size = size;
     }
 
     @Override

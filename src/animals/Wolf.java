@@ -1,10 +1,11 @@
 package animals;
-
+import constants.Sizes;
 public class Wolf extends Carnivorous implements Voice, Run, Swim {
 
-    public Wolf(String name, int fullness) {
+    public Wolf(String name, int fullness, Sizes size) {
         super.fullness = fullness;
         super.name = name;
+        super.size = size;
     }
 
     @Override

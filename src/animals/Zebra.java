@@ -1,10 +1,11 @@
 package animals;
-
+import constants.Sizes;
 public class Zebra extends Herbivore implements Voice, Run {
 
-    public Zebra(String name, int fullness) {
+    public Zebra(String name, int fullness, Sizes size) {
         super.fullness = fullness;
         super.name = name;
+        super.size = size;
     }
 
     @Override

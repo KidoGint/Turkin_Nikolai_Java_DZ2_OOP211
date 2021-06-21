@@ -1,10 +1,11 @@
 package animals;
-
+import constants.Sizes;
 public class Camal extends Herbivore implements Voice, Run {
 
-    public Camal(String name, int fullness) {
+    public Camal(String name, int fullness, Sizes size) {
         super.fullness = fullness;
         super.name = name;
+        super.size = size;
     }
 
     @Override
